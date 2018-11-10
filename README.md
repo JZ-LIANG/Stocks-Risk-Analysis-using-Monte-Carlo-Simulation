@@ -9,16 +9,17 @@ In this notebook, we focus on using Monte Carlo Simulation and Multiple Linear R
 </figure>
 
 
+The goal of this demo is to build a predicion model able to indicate the **VaR (Value at Risk)** for a given stock portfolio: in other words, an indicator of how much the global value of our stocks will increase/decrease in a given time interval. To be more precise, the VaR indicates (with a given confidence level) the expected lower bound of the losses we can expect.
 
 
-The idea is to find "similar" users, so that the system can suggest new artists according to these similarities. In other words: if user "A" likes artist "X", a similar user "B" could like "X" too.
+Notebook can be divided into three parts:
 
-Notebook can be divided into two parts:
+ * First we define relationship between market factors and instrument's returns. We choose to use Ordinary Least Square (OLS) regression model to estimate the weights for each instrument as a linear function of market factors.
 
- * Given the artists and the user behaviours datasets, the first step is to analyze them and clean the data (for example: several artist names could refer to the same person or band, we need to find and uniformize those alias), here we use the **SparkSQL** to manipulate those data.
+ * Defining the distributions for the market factors. Since the distributons of those factors are unknow, we can only approximate their distribution. Weuse the Kernel density estimation (KDE) technique to approximate such distributions.
 
- * After that we build a **"preference matrix"** which gives for each user-item pair, a value that represents what is known about the degree of preference of that user for that item. The value of row i, column j expresses how much does user i like item j. 
+* After we got "elationship between market factors and instruments" and "distributions for the market factors", we could Generate samples of instrument value by running a huge number of simulations, and finally calculate the Var.
 
- Then we choose the **collaborative-filtering** approach to build our recommender system, which in other word is to fill our "preference matrix". We use Parallel Altenating Least Squares**(ALS)** in Spark-MLLib to implement the above algorithm.
+
 
 
