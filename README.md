@@ -1,6 +1,15 @@
-# Songs-Recommender
+# Stocks Risk Analysis using Monte Carlo Simulation
 
-In this notebook, we focus on how to build a simple songs recommender system.
+In this notebook, we focus on using Monte Carlo Simulation and Multiple Linear Regression to analysis financial risk on stocks portfolio.
+
+
+<figure>
+  <img src=".images/simulate_img.png." width="400" alt=".." title="Simulate the Market Factors" />
+  <figcaption>Simulate the Market Factors</figcaption>
+</figure>
+
+
+
 
 The idea is to find "similar" users, so that the system can suggest new artists according to these similarities. In other words: if user "A" likes artist "X", a similar user "B" could like "X" too.
 
@@ -13,6 +22,3 @@ Notebook can be divided into two parts:
  Then we choose the **collaborative-filtering** approach to build our recommender system, which in other word is to fill our "preference matrix". We use Parallel Altenating Least Squares**(ALS)** in Spark-MLLib to implement the above algorithm.
 
 
-<p align="center">
-    <img src="images/matrix_img.png" width="200" alt="Preference Matrix">
-</p>
