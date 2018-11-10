@@ -5,10 +5,11 @@ In this notebook, we focus on using Monte Carlo Simulation and Multiple Linear R
 
 <figure>
   <img src="images/simulate_img.png" width="800" alt="Simulate the Market Factors" title="Simulate the Market Factors" />
-  <figcaption>Simulate the Market Factors</figcaption>
+
 </figure>
+<p align="center"> Simulate the Market Factors </p>
 
-
+<br><br>
 The goal of this demo is to build a predicion model able to indicate the **VaR (Value at Risk)** for a given stock portfolio: in other words, an indicator of how much the global value of our stocks will increase/decrease in a given time interval. To be more precise, the VaR indicates (with a given confidence level) the expected lower bound of the losses we can expect.
 
 
