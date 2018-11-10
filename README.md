@@ -4,7 +4,7 @@ In this notebook, we focus on using Monte Carlo Simulation and Multiple Linear R
 
 
 <figure>
-  <img src=".images/simulate_img.png." width="400" alt=".." title="Simulate the Market Factors" />
+  <img src="images/simulate_img.png." width="400" alt=".." title="Simulate the Market Factors" />
   <figcaption>Simulate the Market Factors</figcaption>
 </figure>
 
